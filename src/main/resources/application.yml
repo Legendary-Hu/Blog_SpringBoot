@@ -1,0 +1,32 @@
+#mysql??
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: Zy981022
+#    redis:
+#      host: 124.223.197.115
+#      port: 6379
+#      password: zy981022.
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+
+
+
+#配置远程redis，共享会话
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 124.223.197.115:6379
+    password: zy981022.
+
+#配置jwt信息
+vueblog:
+  jwt:
+    #添加密钥
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+      #token 过期时间7天
+    expire: 7
+    header: Authorization
+
